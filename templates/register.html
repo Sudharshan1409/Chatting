@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="">
+  <br>
+  <h2><strong>Please Enter your Details</strong></h2>
+</div>
+<form method="post">
+  {{form.hidden_tag()}}
+  <div class="form-group">
+    {{form.email.label}}
+    {{form.email(class="form-control",placeholder = "Email")}}
+  </div>
+  <div class="form-group">
+    {{form.name.label}}
+    {{form.name(class="form-control",placeholder = "Name")}}
+  </div>
+  <div class="form-group">
+    {{form.phno.label}}
+    {{form.phno(class="form-control",placeholder = "Phone Number",pattern="[789][0-9]{9}")}}
+  </div>
+  <div class="form-group">
+    {{form.password.label}}
+    {{form.password(class="form-control",placeholder = "Password")}}
+  </div>
+  <div class="form-group">
+    {{form.pass_confirm.label}}
+    {{form.pass_confirm(class="form-control",placeholder = "Comfirm Password")}}
+  </div>
+  <div class="form-group">
+    {{form.submit(class="btn btn-primary")}}
+  </div>
+</form>
+{% endblock %}
